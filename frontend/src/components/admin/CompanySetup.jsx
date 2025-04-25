@@ -9,10 +9,10 @@ import { toast } from "sonner";
 import axios from "axios";
 import { COMPANY_API_END_POINT } from "@/utils/constant";
 import { useSelector } from "react-redux";
-import useGetCompanyById from '@/hooks/useGetCompanyById'
+// import useGetCompanyById from '@/hooks/useGetCompanyById'
 const CompanySetup = () => {
-  const params =useParams()
-  useGetCompanyById(params.id)
+  // const params =useParams()
+  // useGetCompanyById(params.id)
   const navigate = useNavigate();
   const { id } = useParams();
   const { singleCompany } = useSelector((store) => store.company);
