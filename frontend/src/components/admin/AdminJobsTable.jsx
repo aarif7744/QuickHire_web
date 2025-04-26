@@ -34,7 +34,7 @@ const AdminJobsTable = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const { data } = await axios.get("http://localhost:8000/api/v1/job/get", {
+        const { data } = await axios.get("https://quickhire-web-5.onrender.com/api/v1/job/get", {
           withCredentials: true,
         });
 

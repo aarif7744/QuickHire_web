@@ -26,7 +26,7 @@ function HeroSection() {
         Get your <span className="text-violet-700">Dream Jobs</span>
       </h1>
       <p className="mt-2 text-gray-600">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum consequatur cum quod qui nemo ipsa!
+      "Discover and apply for top jobs, manage your profile, and track applications—all in one place!"
       </p>
 
       <div className="flex w-full sm:w-[60%] md:w-[50%] lg:w-[40%] h-10 mt-6 shadow-lg border border-gray-200 pl-3 rounded-full items-center gap-4 mx-auto">

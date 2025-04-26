@@ -20,7 +20,7 @@ app.use(cookieParser()); // ✅ Parse cookies
 
 // ✅ Allow cookies & credentials in CORS
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: "https://quickhire-web-5.onrender.com",
     credentials: true,
 };
 app.use(cors(corsOptions));

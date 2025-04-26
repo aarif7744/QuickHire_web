@@ -22,7 +22,7 @@ function CompaniesTable() {
     const fetchCompanies = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8000/api/v1/companies/get",
+          "https://quickhire-web-5.onrender.com/api/v1/companies/get",
           { withCredentials: true }
         );
 
