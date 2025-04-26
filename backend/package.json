@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "datauri": "^4.1.0",
+    "parser": "^0.1.4"
+  }
+}
