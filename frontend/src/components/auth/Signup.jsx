@@ -150,6 +150,7 @@ function Signup() {
             <input
               type="file"
               accept="image/*"
+              name="file"
               onChange={changeFileHandler}
               className="w-full border border-gray-300 rounded-md p-2 text-sm text-gray-600 cursor-pointer h-[40px]"
             />
