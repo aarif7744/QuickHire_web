@@ -17,11 +17,11 @@ function Signup() {
     phoneNumber: "",
     password: "",
     role: "",
-    file: null,
+    logo: null, // changed from file to logo
   });
 
   const navigate = useNavigate();
-  const { loading ,user } = useSelector((store) => store.auth);
+  const { loading, user } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
 
   const changeEventHandler = (e) => {
@@ -29,7 +29,7 @@ function Signup() {
   };
 
   const changeFileHandler = (e) => {
-    setInput({ ...input, file: e.target.files[0] });
+    setInput({ ...input, logo: e.target.files[0] }); // changed here also
   };
 
   const submitHandler = async (e) => {
@@ -41,8 +41,8 @@ function Signup() {
     formData.append("phoneNumber", input.phoneNumber);
     formData.append("password", input.password);
     formData.append("role", input.role);
-    if (input.file) {
-      formData.append("file", input.file);
+    if (input.logo) {
+      formData.append("logo", input.logo); // changed from file to logo
     }
 
     try {
@@ -65,11 +65,12 @@ function Signup() {
       dispatch(setLoading(false));
     }
   };
-   useEffect(()=>{
-      if(user){
-        navigate("/")
-      }
-    },[])
+
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   return (
     <>
@@ -150,7 +151,7 @@ function Signup() {
             <input
               type="file"
               accept="image/*"
-              name="file"
+              name="logo" // changed name from file to logo
               onChange={changeFileHandler}
               className="w-full border border-gray-300 rounded-md p-2 text-sm text-gray-600 cursor-pointer h-[40px]"
             />
@@ -170,7 +171,6 @@ function Signup() {
               "Signup"
             )}
           </button>
-
 
           <p className="text-sm text-center text-gray-600">
             Already have an account?
