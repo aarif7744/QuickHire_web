@@ -51,7 +51,7 @@ function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6 font-medium">
+        <nav className="hidden md:flex  gap-6 font-medium">
           {user && user.role === "recruiter" ? (
             <>
               <Link to="/admin/companies">Companies</Link>
