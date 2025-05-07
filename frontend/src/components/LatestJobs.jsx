@@ -11,7 +11,7 @@ function LatestJobs() {
         <span className="text-violet-600">Latest & Top </span>Job Openings
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-4">
         {allJobs.length <= 0 ? (
           <span>No Job Available</span>
         ) : (
