@@ -8,30 +8,27 @@ function LatestJobcards({ job }) {
   return (
     <div
       onClick={() => navigate(`/description/${job._id}`)}
-      className="p-4 sm:p-5 md:p-6 rounded-md shadow-md bg-white border cursor-pointer hover:shadow-lg transition-all duration-200"
+      className="cursor-pointer p-4 rounded-md shadow-md bg-white border hover:shadow-lg transition duration-300"
     >
-      {/* Company Name */}
-      <h1 className="text-base md:text-lg font-semibold">{job?.company?.name}</h1>
-      <p className="text-sm text-gray-500">India</p>
+      <h1 className="font-semibold text-lg text-gray-800 mb-1">
+        {job?.company?.name}
+      </h1>
+      <p className="text-sm text-gray-500 mb-2">India</p>
 
-      {/* Job Title & Description */}
-      <div className="mt-2">
-        <h2 className="text-lg md:text-xl font-bold">{job?.title}</h2>
-        <p className="text-sm md:text-base text-gray-600 line-clamp-2">
-          {job?.description}
-        </p>
+      <div>
+        <h2 className="font-bold text-md text-black mb-1">{job?.title}</h2>
+        <p className="text-sm text-gray-600 line-clamp-3">{job?.description}</p>
       </div>
 
-      {/* Badges */}
       <div className="flex flex-wrap items-center gap-2 mt-4">
-        <Badge className="text-blue-700 font-bold" variant="ghost">
+        <Badge className="text-blue-700 font-semibold" variant="ghost">
           {job?.position} Positions
         </Badge>
-        <Badge className="text-red-700 font-bold" variant="ghost">
+        <Badge className="text-red-700 font-semibold" variant="ghost">
           {job?.jobtype}
         </Badge>
-        <Badge className="text-lime-500 font-bold" variant="ghost">
-          {job?.salary} LPA
+        <Badge className="text-lime-700 font-semibold" variant="ghost">
+          ₹ {job?.salary} LPA
         </Badge>
       </div>
     </div>
